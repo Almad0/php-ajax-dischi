@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1E2D3B;
+}
+
+main .container {
+  width: 1070px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main .container .cd {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin: 10px 20px;
+  height: 360px;
+  width: 200px;
+  background: #2e3a46;
+  text-align: center;
+}
+main .container .cd img {
+  width: 100%;
+}
+main .container .cd h3 {
+  margin: 20px 0;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+main .container .cd span .author {
+  color: grey;
+  font-size: 20px;
+}
+main .container .cd span .year {
+  color: grey;
+}
