@@ -1,0 +1,43 @@
+<!-- Seconda Milestone:
+Attraverso l’utilizzo di AJAX: al caricamento della pagina ajax chiederà attraverso una chiamata i dischi a php e li stamperà attraverso VueJS. -->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dischi json </title>
+    <link rel="stylesheet" href="./dist/css/style.css">
+  </head>
+
+  <body>
+    <div id="root">
+      <header>
+        <div class="container">
+          <img src="dist/logo.png" alt="logo" />
+          <select v-model="albums.genre" name="genre" >
+            <option v-bind:value="albums.Rock">rock</option>
+            <option v-bind:value="albums.Pop">Pop</option>
+            <option v-bind:value="albums.Jazz">Jazz</option>
+            <option v-bind:value="albums.Metal">Metal</option>
+          </select>
+        </div>
+      </header>
+
+      <div  class="cds-container container">
+        <div v-for="album in albums" class="cd">
+          <img :src="album.poster" alt="">
+          <h3>{{album.title}}</h3>
+          <span class="author">{{album.author}}</span>
+          <span class="year">{{album.year}}</span>
+        </div>
+      </div>
+    </div>
+
+
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src="dist/js/app.js" charset="utf-8"></script>
+  </body>
+
+</html>
